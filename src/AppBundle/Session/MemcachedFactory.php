@@ -17,7 +17,7 @@ class MemcachedFactory
      *
      * @return \Memcached
      */
-    public static function createMemcachedFromUrl(string $connectionString)
+    public static function createFromUrl(string $connectionString): \Memcached
     {
         $parts = parse_url($connectionString);
 

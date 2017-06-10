@@ -21,9 +21,9 @@ class DefaultController extends Controller
             $number = random_int(0, PHP_INT_MAX);
             $session->set('random_number', $number);
         }
+
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
-            'base_dir'      => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
             'hostname'      => $_SERVER['HOSTNAME'],
             'random_number' => $number
         ]);

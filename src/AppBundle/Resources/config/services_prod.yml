@@ -1,9 +1,0 @@
-services:
-    session.memcached:
-        class: Memcached
-        factory: ['AppBundle\Session\MemcachedFactory', createMemcachedFromUrl]
-        arguments: ['%env(MEMCACHED_URL)%']
-
-    session.handler.memcached:
-            class:     Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler
-            arguments: ['@session.memcached', { prefix: '%session_memcached_prefix%', expiretime: '%session_memcached_expire%' }]
